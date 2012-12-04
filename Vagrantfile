@@ -35,6 +35,8 @@ Vagrant::Config.run do |config|
       },
 
       "wordpress" => {
+        "version" => "3.4.2",
+        "checksum" => "e69acc6b6fdbffc166fd96f2264d578b4944ef3e451eb9650e8ca795b665eeb0",
         "db" => {
           "database" => "wordpress",
           "user"     => "wordpress",
