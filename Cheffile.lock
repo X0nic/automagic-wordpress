@@ -30,18 +30,10 @@ SITE
     xml (1.0.4)
     yum (1.0.0)
 
-GIT
-  remote: https://github.com/fnichol/chef-rbenv
-  ref: v0.6.10
-  sha: dee3edd9f1118aff336539a8e3497704da2aebff
-  specs:
-    rbenv (0.6.10)
-
 DEPENDENCIES
   apt (>= 0)
   build-essential (>= 0)
   git (>= 0)
-  rbenv (>= 0)
   sudo (>= 0)
   users (>= 0)
   vim (>= 0)

@@ -22,6 +22,6 @@ cookbook 'users'
 cookbook 'sudo'
 # cookbook 'rvm', 
  # git: 'git://github.com/fnichol/chef-rvm.git', ref: 'v0.8.6'
-cookbook 'rbenv',
-  :git => 'https://github.com/fnichol/chef-rbenv', :ref => 'v0.6.10'
+# cookbook 'rbenv',
+#   :git => 'https://github.com/fnichol/chef-rbenv', :ref => 'v0.6.10'
 cookbook 'wordpress'

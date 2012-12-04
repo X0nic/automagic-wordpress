@@ -17,10 +17,11 @@ Vagrant::Config.run do |config|
     # chef.add_recipe "sudo"
     # chef.add_recipe "rvm::vagrant"
     # chef.add_recipe "rvm::system"
-    chef.add_recipe "rbenv::vagrant"
-    chef.add_recipe "rbenv::system"
+    # chef.add_recipe "rbenv::vagrant"
+    # chef.add_recipe "rbenv::system"
     chef.add_recipe "git"
     chef.add_recipe "wordpress"
+    # chef.add_recipe "dmg"
 
     chef.json.merge!(
       "mysql" => {
