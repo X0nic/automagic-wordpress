@@ -7,9 +7,14 @@ Vagrant::Config.run do |config|
   # config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
   config.vm.box_url = "http://files.vagrantup.com/prescise64.box"
   config.vm.network :hostonly, "33.33.33.10"
+  config.vm.forward_port 80, 8080
+  config.vm.forward_port 81, 8081
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
+    chef.provisioning_path = "/var/chef/cache" #set this, otherwise vagrant will delete chef cache on reboot
+    chef.log_level = "debug"
+
     chef.add_recipe "apt"
     chef.add_recipe "build-essential"
     chef.add_recipe "vim"
