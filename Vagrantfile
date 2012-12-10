@@ -5,7 +5,7 @@ Vagrant::Config.run do |config|
   # config.vm.box = "lucid64"
   config.vm.box = "precise64"
   # config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
-  config.vm.box_url = "http://files.vagrantup.com/prescise64.box"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :hostonly, "33.33.33.10"
   config.vm.forward_port 80, 8080
   config.vm.forward_port 81, 8081
