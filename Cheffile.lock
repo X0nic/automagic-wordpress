@@ -20,7 +20,6 @@ SITE
       xml (>= 0.0.0)
     runit (0.15.0)
     sudo (1.2.0)
-    users (1.1.4)
     vim (1.0.2)
     wordpress (1.0.0)
       apache2 (>= 0.99.4)
@@ -30,12 +29,19 @@ SITE
     xml (1.0.4)
     yum (1.0.0)
 
+GIT
+  remote: git://github.com/fnichol/chef-user.git
+  ref: v0.3.0
+  sha: 57522be125f3a5ca60672b45caaba07fff1c2fea
+  specs:
+    user (0.3.0)
+
 DEPENDENCIES
   apt (>= 0)
   build-essential (>= 0)
   git (>= 0)
   sudo (>= 0)
-  users (>= 0)
+  user (>= 0)
   vim (>= 0)
   wordpress (>= 0)
 

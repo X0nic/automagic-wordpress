@@ -18,7 +18,8 @@ cookbook 'apt'
 cookbook 'git'
 cookbook 'build-essential'
 cookbook 'vim'
-cookbook 'users'
+cookbook 'user',
+	:git => 'git://github.com/fnichol/chef-user.git', :ref => 'v0.3.0'
 cookbook 'sudo'
 # cookbook 'rvm', 
  # git: 'git://github.com/fnichol/chef-rvm.git', ref: 'v0.8.6'
