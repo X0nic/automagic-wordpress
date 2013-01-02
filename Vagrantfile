@@ -18,6 +18,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apt"
     chef.add_recipe "build-essential"
     chef.add_recipe "vim"
+    chef.add_recipe "user"
     # chef.add_recipe "user"
     # chef.add_recipe "sudo"
     # chef.add_recipe "rvm::vagrant"
