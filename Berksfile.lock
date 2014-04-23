@@ -1,5 +1,6 @@
 DEPENDENCIES
   apt
+  brightbox-ruby
   build-essential
   chef-client
   git
@@ -9,6 +10,8 @@ DEPENDENCIES
 
 GRAPH
   apt (2.3.8)
+  brightbox-ruby (1.0.0)
+    apt (>= 0.0.0)
   build-essential (2.0.0)
   chef-client (3.4.0)
     cron (>= 1.2.0)
