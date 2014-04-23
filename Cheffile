@@ -3,17 +3,7 @@
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
-
-# cookbook 'apache2', '>= 1.0.0'
-
-# cookbook 'rvm',
-#   :git => 'https://github.com/fnichol/chef-rvm'
-
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
-
+cookbook 'chef-client'
 cookbook 'apt'
 cookbook 'git'
 cookbook 'build-essential'
@@ -21,8 +11,7 @@ cookbook 'vim'
 cookbook 'user',
 	:git => 'git://github.com/fnichol/chef-user.git', :ref => 'v0.3.0'
 cookbook 'sudo'
-# cookbook 'rvm', 
- # git: 'git://github.com/fnichol/chef-rvm.git', ref: 'v0.8.6'
-# cookbook 'rbenv',
-#   :git => 'https://github.com/fnichol/chef-rbenv', :ref => 'v0.6.10'
+cookbook 'ruby_build'
+cookbook 'rbenv', :git => 'https://github.com/fnichol/chef-rbenv'
 cookbook 'wordpress'
+cookbook 'memcached'
