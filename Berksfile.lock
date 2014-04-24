@@ -5,7 +5,7 @@ DEPENDENCIES
   chef-client
   git
   sudo
-  users
+  user
   vim
 
 GRAPH
@@ -32,7 +32,7 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   sudo (2.5.2)
-  users (1.7.0)
+  user (0.3.0)
   vim (1.1.2)
   windows (1.30.2)
     chef_handler (>= 0.0.0)

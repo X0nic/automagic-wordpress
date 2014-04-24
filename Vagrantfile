@@ -23,8 +23,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder(".", "/var/www/wordpress", :mount_options => ['dmode=777'])
 
+  config.berkshelf.enabled = true
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks"]
+    # chef.cookbooks_path = ["cookbooks"]
     chef.provisioning_path = "/var/chef/cache" #set this, otherwise vagrant will delete chef cache on reboot
     chef.log_level = "debug"
 
@@ -34,13 +35,8 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "user"
     # chef.add_recipe "user"
     # chef.add_recipe "sudo"
-    # chef.add_recipe "rvm::vagrant"
-    # chef.add_recipe "rvm::system"
-    # chef.add_recipe "rbenv::vagrant"
-    # chef.add_recipe "rbenv::system"
     chef.add_recipe "git"
-    chef.add_recipe "wordpress"
-    # chef.add_recipe "dmg"
+    chef.add_recipe "brightbox-ruby"
 
     chef.json.merge!(
       "mysql" => {
@@ -56,6 +52,7 @@ Vagrant.configure("2") do |config|
           "user"     => "wordpress",
           "password" => "wordpress"
         }
+      }
       )
     end
 
