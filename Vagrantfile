@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  config.vm.synced_folder(".", "/var/www/wordpress", :mount_options => ['dmode=777'])
+  config.vm.synced_folder("wordpress", "/var/www/wordpress", :mount_options => ['dmode=777'])
 
   config.berkshelf.enabled = true
   config.vm.provision :chef_solo do |chef|
@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
     # chef.add_recipe "sudo"
     chef.add_recipe "git"
     chef.add_recipe "brightbox-ruby"
+    chef.add_recipe 'wordpress'
 
     chef.json.merge!(
       "mysql" => {
