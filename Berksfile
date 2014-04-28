@@ -3,12 +3,7 @@
 
 source "https://api.berkshelf.com"
 
-cookbook 'chef-client'
-cookbook 'apt'
-cookbook 'git'
-cookbook 'build-essential'
-cookbook 'vim'
-cookbook 'user'
-cookbook 'sudo'
-cookbook 'brightbox-ruby'
-cookbook 'wordpress'
+cookbook 'automagic-base',  path: 'automagic-base'
+cookbook 'automagic',       path: 'automagic'
+
+cookbook 'wordpress_nginx', github: 'roots/wordpress-nginx'

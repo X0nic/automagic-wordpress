@@ -20,3 +20,6 @@ doc/
 cookbooks
 tmp
 .vagrant
+
+automagic/Berksfile.lock
+automagic-base/Berksfile.lock

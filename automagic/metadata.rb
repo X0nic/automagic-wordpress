@@ -1,0 +1,10 @@
+name             'automagic'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures automagic'
+long_description 'Installs/Configures automagic'
+version          '0.1.0'
+
+depends 'mysql'
+depends 'wordpress_nginx'

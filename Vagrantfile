@@ -29,15 +29,8 @@ Vagrant.configure("2") do |config|
     chef.provisioning_path = "/var/chef/cache" #set this, otherwise vagrant will delete chef cache on reboot
     chef.log_level = "debug"
 
-    chef.add_recipe "apt"
-    chef.add_recipe "build-essential"
-    chef.add_recipe "vim"
-    chef.add_recipe "user"
-    # chef.add_recipe "user"
-    # chef.add_recipe "sudo"
-    chef.add_recipe "git"
-    chef.add_recipe "brightbox-ruby"
-    chef.add_recipe 'wordpress'
+    chef.add_recipe 'automagic-base'
+    chef.add_recipe 'automagic'
 
     chef.json.merge!(
       "mysql" => {
