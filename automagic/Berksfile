@@ -3,4 +3,6 @@ source "https://api.berkshelf.com"
 metadata
 
 cookbook 'mysql'
+cookbook 'nginx'
+cookbook 'php-fpm'
 cookbook 'wordpress_nginx', github: 'roots/wordpress-nginx'

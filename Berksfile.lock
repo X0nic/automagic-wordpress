@@ -11,6 +11,8 @@ GRAPH
   apt (2.3.10)
   automagic (0.1.0)
     mysql (>= 0.0.0)
+    nginx (>= 0.0.0)
+    php-fpm (>= 0.0.0)
     wordpress_nginx (>= 0.0.0)
   automagic-base (0.1.0)
     apt (>= 0.0.0)

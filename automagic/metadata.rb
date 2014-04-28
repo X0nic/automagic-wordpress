@@ -7,4 +7,6 @@ long_description 'Installs/Configures automagic'
 version          '0.1.0'
 
 depends 'mysql'
+depends 'nginx'
+depends 'php-fpm'
 depends 'wordpress_nginx'
