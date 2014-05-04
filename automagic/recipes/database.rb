@@ -6,12 +6,7 @@ include_recipe 'mysql::client'
 include_recipe 'mysql::server'
 include_recipe 'mysql-chef_gem'
 
-db = {
-  'user' => 'wordpress',
-  'pass' => 'eRoT0Kct2XW6CVktV5Ky',
-  'host' => '127.0.0.1',
-  'name' => 'wordpressdb'
-}
+db = node['automagic']['db']
 
 mysql_connection_info = {
   :host     => 'localhost',
