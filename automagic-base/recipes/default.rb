@@ -1,5 +1,6 @@
 # Cookbook Name:: automagic-base
 # Recipe:: default
+# Author:: Nathan Lee (<nathan@globalphobia.com>)
 #
 # Copyright (C) 2014 Nathan Lee
 #
@@ -19,6 +20,4 @@ include_recipe 'apt'
 include_recipe 'git'
 include_recipe 'build-essential'
 include_recipe 'vim'
-# include_recipe 'user'
-# include_recipe 'sudo'
 include_recipe 'brightbox-ruby'

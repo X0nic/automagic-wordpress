@@ -1,5 +1,6 @@
 # Cookbook Name:: automagic
 # Recipe:: default
+# Author:: Nathan Lee (<nathan@globalphobia.com>)
 #
 # Copyright (C) 2014 Nathan Lee
 #
