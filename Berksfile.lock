@@ -3,6 +3,9 @@ DEPENDENCIES
     path: automagic
   automagic-base
     path: automagic-base
+  vsftpd
+    git: git://github.com/TheSerapher/chef-vsftpd.git
+    revision: 55eafe38ef758fc17cf15d1bd78259c2af6c1a94
   wordpress_nginx
     git: git://github.com/roots/wordpress-nginx.git
     revision: 2aa6917081a827ac514dbb9f02943080376844ac
@@ -24,6 +27,7 @@ GRAPH
     sudo (>= 0.0.0)
     user (>= 0.0.0)
     vim (>= 0.0.0)
+    vsftpd (>= 0.0.0)
   aws (2.2.0)
   brightbox-ruby (1.0.0)
     apt (>= 0.0.0)
@@ -69,6 +73,7 @@ GRAPH
   sudo (2.5.2)
   user (0.3.0)
   vim (1.1.2)
+  vsftpd (0.1.0)
   windows (1.30.2)
     chef_handler (>= 0.0.0)
   wordpress_nginx (0.3.0)
