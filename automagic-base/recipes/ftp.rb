@@ -1,5 +1,5 @@
 # Cookbook Name:: automagic-base
-# Recipe:: default
+# Recipe:: ftp
 # Author:: Nathan Lee (<nathan@globalphobia.com>)
 #
 # Copyright (C) 2014 Nathan Lee
@@ -16,10 +16,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'apt'
-include_recipe 'git'
-include_recipe 'build-essential'
-include_recipe 'vim'
-include_recipe 'brightbox-ruby'
+node.set['pure-ftpd']['backend'] = 'pam'
 
-include_recipe 'automagic-base::ftp'
+include_recipe 'pure-ftpd'
+
+group "ftp" do
+end
+
+user "wordpress" do
+  comment "Wordpress FTP User"
+  # Does not work
+  # supports :manage_home => true
+  group "ftp"
+  # mkpasswd -m sha-512 unsecurepassword
+  password "$6$V3qcx57fhAyF6a$Mg3Fm7V8fneASVP.ehvAYD.WOrnc2xPvQa/rPeEibif3HiYZQVRgFmUtQ5Ad.d4ztYq7Ml3SL5UARjEEEEk.b."
+end
+
+directory '/home/wordpress' do
+  action :create
+  owner 'wordpress'
+  group 'ftp'
+end

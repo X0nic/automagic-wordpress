@@ -3,9 +3,9 @@ DEPENDENCIES
     path: automagic
   automagic-base
     path: automagic-base
-  vsftpd
-    git: git://github.com/TheSerapher/chef-vsftpd.git
-    revision: 55eafe38ef758fc17cf15d1bd78259c2af6c1a94
+  pure-ftpd
+    git: git://github.com/Aigeruth/pure-ftpd.git
+    revision: bf5b0b367c685c6b9ab36c4c148fec7cc4914aaf
   wordpress_nginx
     git: git://github.com/roots/wordpress-nginx.git
     revision: 2aa6917081a827ac514dbb9f02943080376844ac
@@ -24,16 +24,16 @@ GRAPH
     brightbox-ruby (>= 0.0.0)
     build-essential (>= 0.0.0)
     git (>= 0.0.0)
+    pure-ftpd (>= 0.0.0)
     sudo (>= 0.0.0)
     user (>= 0.0.0)
     vim (>= 0.0.0)
-    vsftpd (>= 0.0.0)
   aws (2.2.0)
   brightbox-ruby (1.0.0)
     apt (>= 0.0.0)
-  build-essential (2.0.0)
+  build-essential (2.0.2)
   chef_handler (1.1.6)
-  database (2.1.8)
+  database (2.2.0)
     aws (>= 0.0.0)
     mysql (>= 5.0.0)
     mysql-chef_gem (>= 0.0.0)
@@ -47,7 +47,7 @@ GRAPH
     windows (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  mysql (5.2.2)
+  mysql (5.2.6)
   mysql-chef_gem (0.0.2)
     build-essential (>= 0.0.0)
     mysql (>= 0.0.0)
@@ -59,13 +59,18 @@ GRAPH
     yum (>= 0.0.0)
   ohai (2.0.0)
   openssl (1.1.0)
-  php-fpm (0.6.4)
+  php-fpm (0.6.6)
     apt (>= 0.0.0)
     yum (>= 0.0.0)
   postgresql (3.4.0)
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
+  pure-ftpd (0.1.1)
+    apt (>= 0.0.0)
+    mysql (>= 0.0.0)
+    postgresql (>= 0.0.0)
+    yum (>= 0.0.0)
   runit (1.5.10)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
@@ -73,8 +78,7 @@ GRAPH
   sudo (2.5.2)
   user (0.3.0)
   vim (1.1.2)
-  vsftpd (0.1.0)
-  windows (1.30.2)
+  windows (1.31.0)
     chef_handler (>= 0.0.0)
   wordpress_nginx (0.3.0)
     nginx (<= 1.7.0)

@@ -7,4 +7,4 @@ cookbook 'automagic-base',  path: 'automagic-base'
 cookbook 'automagic',       path: 'automagic'
 
 cookbook 'wordpress_nginx', github: 'roots/wordpress-nginx'
-cookbook 'vsftpd',          github: 'TheSerapher/chef-vsftpd'
+cookbook 'pure-ftpd',          github: 'Aigeruth/pure-ftpd'
