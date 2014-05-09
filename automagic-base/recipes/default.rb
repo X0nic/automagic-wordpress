@@ -21,5 +21,3 @@ include_recipe 'git'
 include_recipe 'build-essential'
 include_recipe 'vim'
 include_recipe 'brightbox-ruby'
-
-include_recipe 'automagic-base::ftp'

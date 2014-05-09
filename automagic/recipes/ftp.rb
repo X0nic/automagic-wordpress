@@ -32,6 +32,7 @@ user "wordpress" do
   password "$6$V3qcx57fhAyF6a$Mg3Fm7V8fneASVP.ehvAYD.WOrnc2xPvQa/rPeEibif3HiYZQVRgFmUtQ5Ad.d4ztYq7Ml3SL5UARjEEEEk.b."
 end
 
+# Because :manage_home does not work
 directory '/home/wordpress' do
   action :create
   owner 'wordpress'
