@@ -23,18 +23,17 @@ include_recipe 'pure-ftpd'
 group "ftp" do
 end
 
-user "wordpress" do
+user node['automagic']['ftpuser'] do
   comment "Wordpress FTP User"
   # Does not work
   # supports :manage_home => true
-  group "ftp"
-  # mkpasswd -m sha-512 unsecurepassword
-  password "$6$V3qcx57fhAyF6a$Mg3Fm7V8fneASVP.ehvAYD.WOrnc2xPvQa/rPeEibif3HiYZQVRgFmUtQ5Ad.d4ztYq7Ml3SL5UARjEEEEk.b."
+  group node['automagic']['ftpgroup']
+  password node['automagic']['ftppassword']
 end
 
 # Because :manage_home does not work
-directory '/home/wordpress' do
+directory "/home/#{node['automagic']['ftpuser']}" do
   action :create
-  owner 'wordpress'
-  group 'ftp'
+  owner node['automagic']['ftpuser']
+  group node['automagic']['ftpgroup']
 end

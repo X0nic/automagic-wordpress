@@ -18,4 +18,4 @@
 
 include_recipe 'automagic::web'
 include_recipe 'automagic::database'
-include_recipe 'automagic-base::ftp'
+include_recipe 'automagic::ftp'
