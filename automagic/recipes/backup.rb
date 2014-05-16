@@ -1,3 +1,9 @@
+[ "build-essential", "libxml2-dev", "libxslt1-dev", "libyaml-dev" ].each do |pkg|
+  package pkg do
+    action :nothing
+  end.run_action(:install)
+end
+
 include_recipe 'backup'
 
 db = node['automagic']['db']
@@ -15,11 +21,11 @@ backup_model db['name'] do
 
     compress_with Gzip
 
-    # store_with S3 do |s3|
-    #   s3.access_key_id = '#{node['aws']['access_key_id']}'
-    #   s3.secret_access_key = '#{node['aws']['secret_access_key']}'
-    #   s3.bucket = 'mybucket'
-    # end
+    store_with S3 do |s3|
+      s3.access_key_id = '#{node['aws']['access_key_id']}'
+      s3.secret_access_key = '#{node['aws']['secret_access_key']}'
+      s3.bucket = 'automagic-wordpress'
+    end
   DEF
 
   schedule({

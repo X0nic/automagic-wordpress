@@ -46,6 +46,10 @@ Vagrant.configure("2") do |config|
           "user"     => "wordpress",
           "password" => "wordpress"
         }
+      },
+      :aws => {
+        :secret_access_key => ENV['AWS_SECRECT_ACCESS_KEY'],
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID']
       }
       )
     end
