@@ -26,6 +26,19 @@ backup_model db['name'] do
       s3.secret_access_key = '#{node['aws']['secret_access_key']}'
       s3.bucket = 'automagic-wordpress'
     end
+
+    sync_with Cloud::S3 do |s3|
+      s3.access_key_id = '#{node['aws']['access_key_id']}'
+      s3.secret_access_key = '#{node['aws']['secret_access_key']}'
+
+      s3.bucket            = 'automagic-wordpress'
+      s3.region            = "us-east-1"
+      s3.path              = "/wordpress-backup"
+
+      s3.directories do |directory|
+        directory.add "/var/www/wordpress"
+      end
+    end
   DEF
 
   schedule({
