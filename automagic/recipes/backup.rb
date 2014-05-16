@@ -36,7 +36,7 @@ backup_model db['name'] do
       s3.path              = "/wordpress-backup"
 
       s3.directories do |directory|
-        directory.add "/var/www/wordpress"
+        directory.add "#{node['automagic']['wordpress_home']}"
       end
     end
   DEF

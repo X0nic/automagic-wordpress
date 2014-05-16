@@ -30,5 +30,5 @@ end
 
 wordpress_nginx_site node['fqdn'] do
   host node['domain']
-  root '/var/www/wordpress'
+  root node['automagic']['wordpress_home']
 end

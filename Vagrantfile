@@ -21,7 +21,8 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  config.vm.synced_folder("wordpress", "/var/www/wordpress", :mount_options => ['dmode=777'])
+  wordpress_home = '/var/www/wordpress'
+  config.vm.synced_folder("wordpress", wordpress_home, :mount_options => ['dmode=777'])
 
   config.berkshelf.enabled = true
   config.vm.provision :chef_solo do |chef|
@@ -33,11 +34,13 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'automagic'
 
     chef.json.merge!(
+      "automagic" => {
+        "wordpress_home" => wordpress_home
+      },
       "mysql" => {
         "server_root_password" => 'GFMHP9mPcvL2tbDsQE1v', #set a default password for so it works with chef-solo
         "allow_remote_root"    => true
       },
-
       "wordpress" => {
         "version" => "3.4.2",
         "checksum" => "e69acc6b6fdbffc166fd96f2264d578b4944ef3e451eb9650e8ca795b665eeb0",
