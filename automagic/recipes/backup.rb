@@ -49,9 +49,9 @@ backup_model db['name'] do
       s3.access_key_id = '#{node['aws']['access_key_id']}'
       s3.secret_access_key = '#{node['aws']['secret_access_key']}'
 
-      s3.bucket            = '#{node['automagic']['backup']['s3_bucket']}'
+      s3.bucket            = "#{node['automagic']['backup']['s3_bucket']}"
       s3.region            = "us-east-1"
-      s3.path              = "/wordpress-backup"
+      s3.path              =  "#{node['automagic']['backup']['s3_path']}"
 
       s3.directories do |directory|
         directory.add "#{node['automagic']['wordpress_home']}"
