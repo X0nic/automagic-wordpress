@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
         "allow_remote_root"    => true
       },
       "wordpress" => {
-        "version" => "3.4.2",
+        "version" => "3.9.1",
         "checksum" => "e69acc6b6fdbffc166fd96f2264d578b4944ef3e451eb9650e8ca795b665eeb0",
         "db" => {
           "database" => "wordpress",
