@@ -18,5 +18,6 @@
 
 include_recipe 'automagic::web'
 include_recipe 'automagic::database'
+include_recipe 'automagic::restore'
 include_recipe 'automagic::ftp'
 include_recipe 'automagic::backup'
