@@ -1,5 +1,3 @@
-include_recipe 'database_restore'
-
 database_restore_download_s3_backup_file "#{Chef::Config[:file_cache_path]}/#{node['automagic']['db']}.tar" do
   aws_access_key_id node[:aws][:access_key_id]
   aws_secret_access_key node[:aws][:secret_access_key]
