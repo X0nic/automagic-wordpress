@@ -13,7 +13,7 @@ DEPENDENCIES
     revision: 2aa6917081a827ac514dbb9f02943080376844ac
 
 GRAPH
-  apt (2.3.10)
+  apt (2.4.0)
   automagic (0.1.0)
     backup (>= 0.0.0)
     database (>= 1.6.0)
