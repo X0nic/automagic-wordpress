@@ -29,7 +29,7 @@ db = node['automagic']['db']
 mysql_connection_info = {
   :host     => 'localhost',
   :username => 'root',
-  :password => node['mysql']['server_root_password']
+  :password => db['pass']
 }
 
 mysql_database db['name'] do
