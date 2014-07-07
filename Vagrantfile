@@ -35,27 +35,11 @@ Vagrant.configure("2") do |config|
 
     chef.json.merge!(
       "automagic" => {
-        "wordpress_home" => wordpress_home
-      },
-      "mysql" => {
-        "server_root_password" => 'GFMHP9mPcvL2tbDsQE1v', #set a default password for so it works with chef-solo
-        "allow_remote_root"    => true
-      },
-      "wordpress" => {
-        "version" => "3.9.1",
-        "checksum" => "e69acc6b6fdbffc166fd96f2264d578b4944ef3e451eb9650e8ca795b665eeb0",
-        "db" => {
-          "database" => "wordpress",
-          "user"     => "wordpress",
-          "password" => "wordpress"
-        }
+        "wordpress_home" => wordpress_home # Don't need to set this, but this makes it easier to change in the Vagrantfile if needed.
       },
       :aws => {
         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
         :access_key_id => ENV['AWS_ACCESS_KEY_ID']
-      },
-      :apt => {
-        :compile_time_update => true
       }
       )
     end
