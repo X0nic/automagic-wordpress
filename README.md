@@ -1,4 +1,4 @@
-automagic-wordpress
+Automagic Wordpress
 ===================
 
 An automagic chef script to setup wordpress
