@@ -21,8 +21,8 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  wordpress_home = '/var/www/wordpress'
-  config.vm.synced_folder("wordpress", wordpress_home, :mount_options => ['dmode=777'])
+  # wordpress_home = '/var/www/wordpress'
+  # config.vm.synced_folder("wordpress", wordpress_home, :mount_options => ['dmode=777'])
 
   config.berkshelf.enabled = true
   config.vm.provision :chef_solo do |chef|
