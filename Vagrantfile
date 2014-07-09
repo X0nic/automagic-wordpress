@@ -34,9 +34,9 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'automagic'
 
     chef.json.merge!(
-      "automagic" => {
-        "wordpress_home" => wordpress_home # Don't need to set this, but this makes it easier to change in the Vagrantfile if needed.
-      },
+      # "automagic" => {
+      #   "wordpress_home" => wordpress_home # Don't need to set this, but this makes it easier to change in the Vagrantfile if needed.
+      # },
       :aws => {
         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
         :access_key_id => ENV['AWS_ACCESS_KEY_ID']
