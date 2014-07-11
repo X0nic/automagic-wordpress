@@ -16,3 +16,11 @@ database_restore_from_file "#{Chef::Config[:file_cache_path]}/#{node[:automagic]
   mysql_username node[:automagic][:db][:user]
   mysql_password node[:automagic][:db][:pass]
 end
+
+include_recipe 'hipsnip-s3cmd'
+
+execute 's3cmd get' do
+  command "s3cmd get --recursive s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/wordpress /var/www/"
+  action :run
+  not_if { ::File.directory? '/var/www/wordpress' }
+end
