@@ -20,7 +20,7 @@ end
 include_recipe 'hipsnip-s3cmd'
 
 execute 's3cmd get' do
-  command "s3cmd get --recursive s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/wordpress /var/www/"
+  command "s3cmd get --recursive s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']} #{node['automagic']['wordpress_parent_dir']}"
   action :run
-  not_if { ::File.directory? '/var/www/wordpress' }
+  not_if { ::File.directory? node['automagic']['wordpress_dir'] }
 end
