@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[automagic-base]
+      - recipe[automagic]
+    attributes:
+      aws:
+        secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+        access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
