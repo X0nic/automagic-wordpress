@@ -17,6 +17,10 @@ database_restore_from_file "#{Chef::Config[:file_cache_path]}/#{node[:automagic]
   mysql_password node[:automagic][:db][:pass]
 end
 
+directory node['automagic']['wordpress_parent_dir'] do
+  action :create
+end
+
 include_recipe 'hipsnip-s3cmd'
 
 execute 's3cmd get' do
