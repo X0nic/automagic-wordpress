@@ -1,0 +1,6 @@
+{
+  "run_list": [
+    "recipe[automagic-base]",
+    "recipe[automagic]"
+  ]
+}
