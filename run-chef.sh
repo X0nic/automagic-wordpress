@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chef-solo -c $(pwd)/solo.rb -j nodes/dna.json
+chef-solo -c $(pwd)/solo.rb -j dna.json
