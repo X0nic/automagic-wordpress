@@ -16,12 +16,10 @@ tmp
 .yardoc
 _yardoc
 doc/
-
 cookbooks
-tmp
 .vagrant
-
 automagic/Berksfile.lock
 automagic-base/Berksfile.lock
 .kitchen/
 .kitchen.local.yml
+/cookbooks/
