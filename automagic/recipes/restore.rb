@@ -1,6 +1,6 @@
 database_restore_download_s3_backup_file "#{Chef::Config[:file_cache_path]}/#{node[:automagic][:db][:name]}.tar" do
-  aws_access_key_id node[:aws][:access_key_id]
-  aws_secret_access_key node[:aws][:secret_access_key]
+  aws_access_key_id node[:aws_access_key_id]
+  aws_secret_access_key node[:aws_secret_access_key]
   s3_dir_path node[:automagic][:restore][:s3_path]
   s3_bucket node[:automagic][:restore][:s3_bucket]
   database node[:automagic][:db][:name]
