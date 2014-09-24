@@ -5,7 +5,6 @@ DEPENDENCIES
     path: automagic-base
   brightbox-ruby
   database_restore
-    path: ../chef-database_restore
   pure-ftpd
     git: git://github.com/Aigeruth/pure-ftpd.git
     revision: dbdc672d9300986cf02f91e3a73443458573a8fa
