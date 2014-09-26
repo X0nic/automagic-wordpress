@@ -24,13 +24,12 @@ end
 include_recipe 'hipsnip-s3cmd'
 
 execute 's3cmd ls' do
-  command "s3cmd ls s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']} #{node['automagic']['wordpress_parent_dir']}"
+  command "s3cmd ls s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']}
   action :run
-  not_if { ::File.directory? node['automagic']['wordpress_dir'] }
 end
 
 file "#{node['automagic']['wordpress_parent_dir']}/sync.sh" do
-  content "s3cmd get --recursive s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']} #{node['automagic']['wordpress_parent_dir']}"
+  content "s3cmd get --recursive s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']} #{node['automagic']['wordpress_dir']}"
   action :create
   mode '755'
 end
