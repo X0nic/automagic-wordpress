@@ -14,7 +14,7 @@ DEPENDENCIES
 
 GRAPH
   apt (2.6.0)
-  automagic (0.1.0)
+  automagic (0.1.2)
     backup (>= 0.0.0)
     database (>= 1.6.0)
     database_restore (>= 0.0.0)

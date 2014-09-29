@@ -54,7 +54,7 @@ backup_model db['name'] do
       s3.path              =  "#{node['automagic']['backup']['s3_path']}"
 
       s3.directories do |directory|
-        directory.add "#{node['automagic']['wordpress_home']}"
+        directory.add "#{node['automagic']['wordpress_dir']}"
       end
     end
   DEF

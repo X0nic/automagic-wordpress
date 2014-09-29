@@ -4,7 +4,7 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures automagic'
 long_description 'Installs/Configures automagic'
-version          '0.1.0'
+version          '0.1.2'
 
 depends 'mysql'
 depends 'nginx'

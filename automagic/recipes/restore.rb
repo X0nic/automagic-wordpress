@@ -24,7 +24,7 @@ end
 include_recipe 'hipsnip-s3cmd'
 
 execute 's3cmd ls' do
-  command "s3cmd ls s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']}
+  command "s3cmd ls s3://#{node[:automagic][:restore][:s3_bucket]}/wordpress-backup/#{node['automagic']['wordpress_dir_name']}"
   action :run
 end
 
